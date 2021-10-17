@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>LiveServer</title>
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <div id="mini-app">
+      <header>
+        <h1>ASN 04 - Baby Blackjack</h1>
+      </header>
+      <div class="result"><h2>You...</h2></div>
+      <div class="player">
+        <h2>Your card</h2>
+        <div class="card" v-if="yourCard1">{{yourCard1}}</div>
+        <div class="card" v-if="yourCard2">{{yourCard2}}</div>
+        <div class="card" v-if="yourCard3">{{yourCard3}}</div>
+      </div>
+      <div class="player">
+        <h2>Your opponent</h2>
+      </div>
+      <div class="player-actions">
+        <button @click="play">play</button>
+        <button>Draw 1 More</button>
+        <button>Check</button>
+        <button>End</button>
+      </div>
+    </div>
+  </body>
+</html>
